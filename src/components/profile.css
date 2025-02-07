@@ -1,0 +1,57 @@
+/* Container for profile cards */
+.profile-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    justify-content: center; /* Centers the cards */
+    gap: 20px; /* Adds spacing between cards */
+    margin-top: 20px;
+}
+
+/* Individual profile card */
+.profile-card {
+    flex: 0 1 220px; /* Ensures fixed width and flexibility */
+    max-width: 200px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-card:hover {
+    transform: scale(1.05); /* Subtle zoom effect on hover */
+}
+
+/* Card header */
+.card-header {
+    padding: 10px 0;
+}
+
+/* Circular profile image */
+.card-avatar {
+    width: 100px; /* Increase size for better visibility */
+    height: 100px;
+    margin: 0 auto 10px;
+    border-radius: 50%; /* Makes image circular */
+    object-fit: cover; /* Ensures image fits properly */
+    border: 3px solid #FF0000; /* Blue border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+}
+
+/* Full name */
+.card-fullname {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+/* Position */
+.card-position {
+    font-size: 14px;
+    color: gray;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px
+}
