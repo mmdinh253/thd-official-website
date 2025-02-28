@@ -1,17 +1,36 @@
 /* Container for profile cards */
 .profile-container {
-    display: flex;
-    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center; /* Centers the cards */
+    text-align: center;
     gap: 20px; /* Adds spacing between cards */
     margin-top: 20px;
+}
+
+.profile-container.btv {
+    grid-template-columns: repeat(3, 1fr); /* First row has 3 */
+}
+
+.profile-container.btv .profile-card:nth-child(4),
+.profile-container.btv .profile-card:nth-child(5) {
+    justify-self: center; /* Centers them in the second row */
+}
+
+/* Ensure Nganh Truong section remains unaffected */
+.profile-container.nganh-truong {
+    grid-template-columns: repeat(4, 1fr); /* Keeps normal layout */
+}
+
+h1 {
+    color: #000;
 }
 
 /* Individual profile card */
 .profile-card {
     flex: 0 1 220px; /* Ensures fixed width and flexibility */
     max-width: 200px;
-    background-color: white;
+    background-color: #d3d3d3;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -35,7 +54,7 @@
     margin: 0 auto 10px;
     border-radius: 50%; /* Makes image circular */
     object-fit: cover; /* Ensures image fits properly */
-    border: 3px solid #FF0000; /* Blue border */
+    border: 1px solid #FF0000; /* Blue border */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
 }
 
@@ -47,11 +66,18 @@
     margin: 10px 0 5px;
 }
 
+/* Position in English */
+.card-position-english {
+    font-size: 15px;
+    color: grey;
+    letter-spacing: 1px;
+    margin-bottom: 10px
+}
+
 /* Position */
-.card-position {
-    font-size: 14px;
-    color: gray;
-    text-transform: uppercase;
+.card-position-vietnamese {
+    font-size: 12px;
+    color: grey;
     letter-spacing: 1px;
     margin-bottom: 10px
 }

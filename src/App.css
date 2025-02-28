@@ -51,7 +51,7 @@ html, body, #root {
 }
 
 .page-container {
-  background: #00A36C;
+  background: #FFFEFC;
   width: 100%;
   min-height: 100vh; /* Allow content to expand */
   display: flex;
@@ -65,7 +65,7 @@ html, body, #root {
   font-size: 2.5rem;
   font-weight: bold;
   display: block;
-  color: #ffffff;
+  color: #000000;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -119,7 +119,7 @@ a {
   border-collapse: collapse;
   margin-bottom: 30px;
   align-items: center;
-  border-bottom: 1px solid #ddd; /* Set color and style */
+  border-bottom: 1px solid #000; /* Set color and style */
 }
 
 .table td, 

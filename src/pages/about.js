@@ -2,21 +2,6 @@ import React from "react";
 import "../components/profile.css";
 
 const About = () => {
-    const btv = [
-        { name: "Tr. Vien", position: "Chapter President - Đoàn Trưởng", img: "/images/vienhua.jpg" },
-        { name: "Tr. Bao Huong", position: "Chapter Vice President Of Administrative Affairs - Phó Quản Trị", img: "/images/bhdoan.jpg" },
-        { name: "Tr. Julie", position: "Chapter Vice President Of Academic Affairs - Phó Nghiên Huấn", img: "/images/juliedinh.jpg" },
-        { name: "Tr. Uyen", position: "Chapter Secretary - Thư Ký", img: "/images/uyendao.jpg" },
-        { name: "Tr. Trung", position: "Chapter Treasurer - Thủ Quỹ", img: "/images/trungdo.jpg" },
-    ];
-
-    const nganhTruong = [
-        { name: "Tr. ", position: "Ngành Trưởng - Ấu Nhi", img: "/images/" },
-        { name: "Tr. ", position: "Ngành Trưởng - Thiếu Nhi", img: "/images/" },
-        { name: "Tr. ", position: "Ngành Trưởng - Nghĩa Sĩ", img: "/images/portrait.jpeg" },
-        { name: "Tr. ", position: "Ngành Trưởng - Hiệp Sĩ", img: "/images/" },
-    ]
-
     return (
         <div className="page-container">
             <div className="subtitle">

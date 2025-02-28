@@ -1,6 +1,6 @@
 /* General Navbar Styles */
 .navbar {
-  background: #AA336A;
+  background: #C36725;
   height: 80px;
   width: 100%;
   display: flex;
@@ -69,8 +69,8 @@
 }
 
 .nav-links:hover {
-  border-bottom: 4px solid #fff;
-  background-color: #AA336A;
+  background-color: #fff;
+  color: #242424;
   transition: all 0.2s ease-out;
 }
 
@@ -80,7 +80,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #AA336A;
+  background-color: #C36725;
   min-width: 200px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -128,7 +128,7 @@
     position: absolute;
     top: 80px;
     left: -100%;
-    background: #AA336A;
+    background: #C36725;
     transition: all 0.5s ease-in-out;
   }
 

@@ -5,15 +5,14 @@ import './Cards.css';
 function Cards() {
   return (
     <div className='cards'>
-      <h1>Check out these Epic destinations!</h1>
       <div className='cards__container'>
         <div className='cards__wrapper'>
           <ul className="cards__items">
             <CardItem 
-                src='./images/tnttlogo.png'
+                src='./images/tnttregistration.jpg'
                 // text="Register Now!"
                 label='Registration'
-                path='https://docs.google.com/forms/d/e/1FAIpQLSdMY95gPTKSQI8lNP-FtYjSZCf26blJXZEjoYwNVsACjOeHMA/viewform?usp=header'
+                path='https://docs.google.com/document/d/1_89t-vaMumojb2-v7dqDzVP64F5C67oC/edit?fbclid=IwZXh0bgNhZW0CMTEAAR09YpHuqSmiXr8HDqK0VrG9My54Idis7ik_kzygMduaw-ChtKhWU5C9dbY_aem_BqBWhUoSJ-L4dlDxMWPGgw'
             />
             <CardItem 
               src='./images/promotion.jpg'

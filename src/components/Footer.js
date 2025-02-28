@@ -28,12 +28,6 @@ function Footer() {
               Watch Past Videos
             </Link>
           </div>
-          <div class='footer-link-items'>
-            <h2>Social Media</h2>
-            <Link to='https://www.instagram.com/tntt.thd/'>Instagram</Link>
-            <Link to='https://www.facebook.com/groups/220113524726276'>Facebook</Link>
-            <Link to='https://www.youtube.com/@thieunhidoanthd6906'>Youtube</Link>
-          </div>
         </div>
       </div>
       <section class='social-media'>
