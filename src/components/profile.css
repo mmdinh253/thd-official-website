@@ -1,26 +1,12 @@
 /* Container for profile cards */
 .profile-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     justify-content: center; /* Centers the cards */
     text-align: center;
     gap: 20px; /* Adds spacing between cards */
     margin-top: 20px;
 }
 
-.profile-container.btv {
-    grid-template-columns: repeat(3, 1fr); /* First row has 3 */
-}
-
-.profile-container.btv .profile-card:nth-child(4),
-.profile-container.btv .profile-card:nth-child(5) {
-    justify-self: center; /* Centers them in the second row */
-}
-
-/* Ensure Nganh Truong section remains unaffected */
-.profile-container.nganh-truong {
-    grid-template-columns: repeat(4, 1fr); /* Keeps normal layout */
-}
 
 h1 {
     color: #000;
@@ -38,6 +24,7 @@ h1 {
     transition: transform 0.3s ease-in-out;
 }
 
+
 .profile-card:hover {
     transform: scale(1.05); /* Subtle zoom effect on hover */
 }
@@ -54,7 +41,7 @@ h1 {
     margin: 0 auto 10px;
     border-radius: 50%; /* Makes image circular */
     object-fit: cover; /* Ensures image fits properly */
-    border: 1px solid #FF0000; /* Blue border */
+    /* border: 1px solid #FF0000; /* red border */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
 }
 

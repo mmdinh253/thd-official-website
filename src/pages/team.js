@@ -2,6 +2,12 @@ import React from "react";
 import "../components/profile.css";
 
 const Team = () => {
+    const cha = {
+        name: "Cha Đaminh Nguyễn Anh Tuấn", 
+        position_vietnamese: "Cha Tuyên Úy", 
+        img: "/images/chatuan.jpg" 
+    };
+
     const btv = [
         { name: "Tr. Vien", position_english: "Chapter President", position_vietnamese: "Đoàn Trưởng", img: "/images/vienhua.jpg" },
         { name: "Tr. Bao Huong", position_english: "Chapter Vice President of Administrative Affairs", position_vietnamese: "Phó Quản Trị", img: "/images/bhdoan.jpg" },
@@ -13,17 +19,29 @@ const Team = () => {
     const nganhTruong = [
         { name: "Tr. Uyen", position_english: "Division Leader Seedling Specialist", position_vietnamese: "Ngành Trưởng Ấu Nhi", img: "/images/uyendao.jpg" },
         { name: "Tr. Bao Ngan", position_english: "Division Leader Search Specialist", position_vietnamese: "Ngành Trưởng Thiếu Nhi", img: "/images/bndoan.jpg" },
-        { name: "Tr. Michael", position_english: "Ngành Trưởng Nghĩa Sĩ - Division Leader Companion Specialist", position_vietnamese: "", img: "/images/portrait.jpeg" },
-        { name: "Tr. An", position_english: "Ngành Trưởng Hiệp Sĩ - Division Leader Knights of the Eucharist Specialist", position_vietnamese: "", img: "/images/antran.jpg" },
+        { name: "Tr. Michael", position_english: "Division Leader Companion Specialist", position_vietnamese: "Ngành Trưởng Nghĩa Sĩ", img: "/images/portrait.jpeg" },
+        { name: "Tr. An", position_english: "Division Leader Knights of the Eucharist Specialist", position_vietnamese: "Ngành Trưởng Hiệp Sĩ", img: "/images/antran.jpg" },
     ]
 
     return (
         <div className="page-container">
             <div className="subtitle">
-                Meet the Team
+                Meet the Team - Ban Chấp Hành
             </div>
-            <h1>Ban Thuong Vu</h1>
-            <div className="profile-container btv">
+            <div className="profile-container">
+                    <div className="profile-card">
+                    <div className="card-header">
+                        <img
+                            className="card-avatar"
+                            src={cha.img}
+                            alt={`${cha.img}'s avatar`}
+                        />
+                        <h1 className="card-fullname">{cha.name}</h1>
+                        <h2 className="card-position-vietnamese">{cha.position_vietnamese}</h2>
+                    </div>
+                </div>
+            </div>
+            <div className="profile-container">
                 {btv.map((btv, index) => (
                     <div className="profile-card" key={index}>
                         <div className="card-header">
@@ -39,7 +57,7 @@ const Team = () => {
                     </div>
                 ))}
             </div>
-            <div className="profile-container nganh-truong">
+            <div className="profile-container">
                 {nganhTruong.map((nganhTruong, index) => (
                     <div className="profile-card" key={index}>
                         <div className="card-header">

@@ -71,6 +71,7 @@ html, body, #root {
   letter-spacing: 2px;
   padding: 10px 20px;
   border-radius: 8px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 h1 {
