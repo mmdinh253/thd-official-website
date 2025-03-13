@@ -62,7 +62,7 @@ html, body, #root {
 }
 
 .subtitle {
-  font-size: 2.5rem;
+  font-size: 2.0rem;
   font-weight: bold;
   display: block;
   color: #000000;
@@ -71,7 +71,7 @@ html, body, #root {
   letter-spacing: 2px;
   padding: 10px 20px;
   border-radius: 8px;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 h1 {
@@ -100,6 +100,7 @@ p {
 
 .description {
   font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   color: #000;
   text-align: justify;
   padding-left: 10%;

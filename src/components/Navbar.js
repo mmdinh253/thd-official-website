@@ -113,7 +113,7 @@ function Navbar() {
         </li>
 
         <li className="nav-item">
-          <Link to="/news" className="nav-links" onClick={closeMobileMenu}>News</Link>
+          <Link to="/events" className="nav-links" onClick={closeMobileMenu}>Events</Link>
         </li>
         <li className="nav-item">
           <Link to="/contact" className="nav-links" onClick={closeMobileMenu}>Contact</Link>

@@ -8,17 +8,14 @@ function Footer() {
     <div className='footer-container'>
       <div class='footer-links'>
         <div className='footer-link-wrapper'>
-          <div class='footer-link-items'>
+          {/* <div class='footer-link-items'>
             <h2>About Us</h2>
             <Link to='/'>How it works</Link>
             <Link to='/'>Rules and Regulations</Link>
-          </div>
+          </div> */}
           <div class='footer-link-items'>
             <h2>Contact Us</h2>
             <a href='mailto:mmdinh253@gmail.com'>Email Us</a>
-            <Link to='/https://docs.google.com/forms/d/e/1FAIpQLSdMY95gPTKSQI8lNP-FtYjSZCf26blJXZEjoYwNVsACjOeHMA/viewform?usp=sharing'>
-              Registration
-            </Link>
           </div>
         </div>
         <div className='footer-link-wrapper'>
@@ -32,13 +29,6 @@ function Footer() {
       </div>
       <section class='social-media'>
         <div class='social-media-wrap'>
-          <div class='footer-logo'>
-            {/* <Link to='/' className='social-logo'>
-              Teresa Hai Dong Giesu
-              <i class='fab fa-pagelines'/>
-            </Link> */}
-          </div>
-          <small class='website-rights'>THD © 2025</small>
           <div class='social-icons'>
             <Link
               class='social-icon-link facebook'
@@ -67,6 +57,7 @@ function Footer() {
           </div>
         </div>
       </section>
+      <small class='website-rights'>Đoàn Têrêsa Hài Đồng Giêsu © 2025. All rights reserved.</small>
     </div>
   );
 }

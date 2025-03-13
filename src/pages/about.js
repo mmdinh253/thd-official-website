@@ -8,7 +8,7 @@ const About = () => {
                 About Us
             </div>
             <div className="description">
-                <p>Đoàn Têrêsa Hài Đồng Giêsu is a chapter located in Tacoma, Washington that is a part of the Vietnamese Eucharistic Youth Movement.</p>
+                Đoàn Têrêsa Hài Đồng Giêsu is a chapter located in Tacoma, Washington that is a part of the Vietnamese Eucharistic Youth Movement.
             </div>
             <div className="subtitle">
                 Our Patron Saint
@@ -20,7 +20,7 @@ const About = () => {
                             <div className="subtitle">
                                 Our Purpose
                             </div>
-                    </th>
+                        </th>
                         <th>
                             <div className="subtitle">
                                 Mục Đích
@@ -28,24 +28,24 @@ const About = () => {
                         </th>
                     </tr>
                 </thead>
-            <tbody>
-                <tr>
-                    <td>
-                    <div className="description">
-                        <p>The Eucharistic Youth Movement has two general purposes:</p>
-                        <p>1. To educate and train youths in becoming a better person as well as an excellent Christian.</p>
-                        <p>2. To organize and to guide all youths in spreading the Good News of the Gospel and to actively be involved in working for the good of society through charitable services and helping others.</p>
-                    </div>
-                    </td>
-                    <td>
-                    <div className="description">
-                        <p>Phong Trào Thiếu Nhi Thánh Thể nhằm hai mục đích tổng quát:</p>
-                        <p>1. Đào Luyện thanh thiếu niên trở thành những con người kiện toàn và những Kitô Hữu hoàn hảo.</p>
-                        <p>2. Đoàn ngũ hoá và hướng dẫn thanh thiếu niên loan truyền Tin Mừng Chúa Kitô và góp phần xây dựng xã hội.</p>
-                    </div>
-                    </td>
-                </tr>
-            </tbody>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div className="description">
+                                <p>The Eucharistic Youth Movement has two general purposes:</p>
+                                <p>1. To educate and train youths in becoming a better person as well as an excellent Christian.</p>
+                                <p>2. To organize and to guide all youths in spreading the Good News of the Gospel and to actively be involved in working for the good of society through charitable services and helping others.</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div className="description">
+                                <p>Phong Trào Thiếu Nhi Thánh Thể nhằm hai mục đích tổng quát:</p>
+                                <p>1. Đào Luyện thanh thiếu niên trở thành những con người kiện toàn và những Kitô Hữu hoàn hảo.</p>
+                                <p>2. Đoàn ngũ hoá và hướng dẫn thanh thiếu niên loan truyền Tin Mừng Chúa Kitô và góp phần xây dựng xã hội.</p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
             </div>
             <div className="table">
                 <thead>
