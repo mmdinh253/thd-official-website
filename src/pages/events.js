@@ -1,9 +1,9 @@
 import React from "react";
-import MonthlyCalendar from "../components/MonthlyCalendar";
+import Calendar from "../components/MyCalendarApp";
 
 const Events = () => {
     return (
-        <MonthlyCalendar/>
+        <Calendar/>
     );
 };
 
