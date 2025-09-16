@@ -1,129 +1,157 @@
-import React, { useEffect, useState } from "react";
-import {DayPilot,
-  // DayPilotCalendar,
-  DayPilotMonth
-} from "@daypilot/daypilot-lite-react";
-import "./Calendar.css";
+import React, { useState } from "react";
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
+import "../App.css";
 
-const Calendar = () => {
-  // const [view, setView] = useState("Week");
-  const [startDate, setStartDate] = useState(DayPilot.Date.today());
-  const [events, setEvents] = useState([]);
+const App = () => {
+    const [selectedDate, setSelectedDate] = useState(null);
+    const [eventName, setEventName] = useState("");
+    const [events, setEvents] = useState([]);
 
-  const eventCategories = {
-    "Sinh Hoat": "##88E788",
-    "Holy Week": "#800080",
-    "Meeting": "#ffffff",
-    "Fundraiser": "#ffcc00",
-    "Training": "#0000ff",
-    "No Thieu Nhi": "#ff0000",
-    "Retreat": "#800080",
-    "Holiday": "#ffd700",
-    "Camp": "#ffd700",
-  };
+    const Date_Click_Fun = (date) => {
+        setSelectedDate(date);
+    };
 
-  useEffect(() => {
-    const data = [
-      { id: 1, text: "First Day of Sinh Hoat", category: "Sinh Hoat", start: "2025-03-23T13:30:00", end: "2025-03-23T16:00:00" },
-      { id: 2, text: "Holy Week (Triduum)", category: "Holy Week", start: "2025-04-17T00:00:00", end: "2025-04-19T23:59:59" },
-      { id: 3, text: "Holy Thursday", category: "Holy Week", start: "2025-04-17T00:00:00", end: "2025-04-17T23:59:59" },
-      { id: 4, text: "Good Friday", category: "Holy Week", start: "2025-04-18T00:00:00", end: "2025-04-18T23:59:59" },
-      { id: 5, text: "Easter Vigil", category: "Holy Week", start: "2025-04-19T00:00:00", end: "2025-04-19T23:59:59" },
-      { id: 5, text: "Easter", category: "Holiday", start: "2025-04-20T00:00:00", end: "2025-04-20T23:59:59" },
-      { id: 6, text: "Mother's Day", category: "Holiday", start: "2025-05-11T00:00:00", end: "2025-05-11T23:59:59" },
-      { id: 7, text: "DTDP training", category: "Training", start: "2025-05-03T00:00:00", end: "2025-05-03T23:59:59" },
-      { id: 7, text: "DTDP training", category: "Training", start: "2025-05-10T00:00:00", end: "2025-05-10T23:59:59" },
-      { id: 7, text: "DTDP training", category: "Training", start: "2025-05-17T00:00:00", end: "2025-05-17T23:59:59" },
-      { id: 7, text: "DTDP training camp - with Doan Thanh Giuse", category: "Camp", start: "2025-05-23T00:00:00", end: "2025-05-25T23:59:59" },
-      { id: 7, text: "HLHT Cap 3", category: "Camp", start: "2025-06-04T00:00:00", end: "2025-06-08T23:59:59" },
-      { id: 8, text: "Memorial Day", category: "Holiday", start: "2025-05-26T00:00:00", end: "2025-05-26T23:59:59" },
-      { id: 6, text: "Father's Day", category: "Holiday", start: "2025-06-15T00:00:00", end: "2025-06-15T23:59:59" },
-      { id: 7, text: "Camp with Doan Thanh Gia", category: "Camp", start: "2025-06-20T00:00:00", end: "2025-06-22T23:59:59" },
-      { id: 7, text: "Summer Break - No TNTT", category: "No Thieu Nhi", start: "2025-06-29T00:00:00", end: "2025-08-31T23:59:59" },
-    ];
+    const Event_Data_Update = (event) => {
+        setEventName(event.target.value);
+    };
 
-    // Assign colors dynamically based on category
-    const formattedData = data.map(event => ({
-      ...event,
-      start: new DayPilot.Date(event.start),
-      end: new DayPilot.Date(event.end),
-      backColor: eventCategories[event.category] || "#cccccc", // Default color if category not found
-    }));
+    const Create_Event_Fun = () => {
+        if (selectedDate && eventName) {
+            const newEvent = {
+                id: new Date().getTime(),
+                date: selectedDate,
+                title: eventName,
+            };
+            setEvents([...events, newEvent]);
+            setSelectedDate(null);
+            setEventName("");
+            setSelectedDate(newEvent.date);
+        }
+    };
 
-    setEvents(formattedData);
-  }, []);
+    const Update_Event_Fun = (eventId, newName) => {
+        const updated_Events = events.map((event) => {
+            if (event.id === eventId) {
+                return {
+                    ...event,
+                    title: newName,
+                };
+            }
+            return event;
+        });
+        setEvents(updated_Events);
+    };
 
-  const handlePrevious = () => { setStartDate(startDate.addMonths(-1)); };
+    const Delete_Event_Fun = (eventId) => {
+        const updated_Events = events.filter((event) => event.id !== eventId);
+        setEvents(updated_Events);
+    };
 
-  const handleNext = () => { setStartDate(startDate.addMonths(1)); };
-
-  return (
-    <div className="container">
-      <div className="content">
-        <div className="toolbar">
-          {/* <div className="toolbar-group">
-            <button
-              onClick={() => setView("Week")}
-              className={view === "Week" ? "selected" : ""}
-            >
-              Week
-            </button>
-            <button
-              onClick={() => setView("Month")}
-              className={view === "Month" ? "selected" : ""}
-            >
-              Month
-            </button>
-          </div> */}
-          <div className="current-month-container">
-            <button onClick={handlePrevious} className="standalone">←</button>
-            <div className="current-month-title">
-              <span className="current-month">
-                {startDate.toString("MMMM yyyy")}
-              </span>
-            </div>
-          </div>
-          <button onClick={handleNext} className="standalone">→</button>
-          <button
-            onClick={() => setStartDate(DayPilot.Date.today())}
-            className="standalone"
-          >
-            Today
-          </button>
+    return (
+        <div className="app">
+            <h1> Events </h1>
+            <div className="container">
+                <div className="calendar-container">
+                    <Calendar
+                        value={selectedDate}
+                        onClickDay={Date_Click_Fun}
+                        tileClassName={({ date }) =>
+                            selectedDate &&
+                            date.toDateString() === selectedDate.toDateString()
+                                ? "selected"
+                                : events.some(
+                                      (event) =>
+                                          event.date.toDateString() ===
+                                          date.toDateString(),
+                                  )
+                                ? "event-marked"
+                                : ""
+                        }
+                    />{" "}
+                </div>
+                <div className="event-container">
+                    {" "}
+                    {selectedDate && (
+                        <div className="event-form">
+                            <h2> Create Event </h2>{" "}
+                            <p>
+                                {" "}
+                                Selected Date: {selectedDate.toDateString()}{" "}
+                            </p>{" "}
+                            <input
+                                type="text"
+                                placeholder="Event Name"
+                                value={eventName}
+                                onChange={Event_Data_Update}
+                            />{" "}
+                            <button
+                                className="create-btn"
+                                onClick={Create_Event_Fun}
+                            >
+                                Click Here to Add Event{" "}
+                            </button>{" "}
+                        </div>
+                    )}
+                    {events.length > 0 && selectedDate && (
+                        <div className="event-list">
+                            <h2> My Created Event List </h2>{" "}
+                            <div className="event-cards">
+                                {" "}
+                                {events.map((event) =>
+                                    event.date.toDateString() ===
+                                    selectedDate.toDateString() ? (
+                                        <div
+                                            key={event.id}
+                                            className="event-card"
+                                        >
+                                            <div className="event-card-header">
+                                                <span className="event-date">
+                                                    {" "}
+                                                    {event.date.toDateString()}{" "}
+                                                </span>{" "}
+                                                <div className="event-actions">
+                                                    <button
+                                                        className="update-btn"
+                                                        onClick={() =>
+                                                            Update_Event_Fun(
+                                                                event.id,
+                                                                prompt(
+                                                                    "ENTER NEW TITLE",
+                                                                ),
+                                                            )
+                                                        }
+                                                    >
+                                                        Update Event{" "}
+                                                    </button>{" "}
+                                                    <button
+                                                        className="delete-btn"
+                                                        onClick={() =>
+                                                            Delete_Event_Fun(
+                                                                event.id,
+                                                            )
+                                                        }
+                                                    >
+                                                        Delete Event{" "}
+                                                    </button>{" "}
+                                                </div>{" "}
+                                            </div>{" "}
+                                            <div className="event-card-body">
+                                                <p className="event-title">
+                                                    {" "}
+                                                    {event.title}{" "}
+                                                </p>{" "}
+                                            </div>{" "}
+                                        </div>
+                                    ) : null,
+                                )}{" "}
+                            </div>{" "}
+                        </div>
+                    )}{" "}
+                </div>{" "}
+            </div>{" "}
         </div>
-
-        {/* <DayPilotCalendar
-          viewType={"Week"}
-          startDate={startDate}
-          events={events}
-          visible={view === "Week"}
-          durationBarVisible={false}
-          eventMoveHandling={"Disabled"}
-          eventResizeHandling={"Disabled"}
-          timeRangeSelectedHandling={"Disabled"}
-        /> */}
-        <DayPilotMonth
-          startDate={startDate}
-          events={events}
-          // visible={view === "Month"}
-          eventBarVisible={false}
-          eventMoveHandling={"Disabled"}
-          eventResizeHandling={"Disabled"}
-          timeRangeSelectedHandling={"Disabled"}
-        />
-
-        {/* Color Legend */}
-        <div className="legend">
-          {Object.entries(eventCategories).map(([category, color]) => (
-            <div key={category} className="legend-item">
-              <span className="color-box" style={{ backgroundColor: color }}></span>
-              <span>{category}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
+    );
 };
 
-export default Calendar;
+export default App;
