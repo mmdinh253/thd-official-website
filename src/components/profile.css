@@ -46,16 +46,16 @@ h1 {
 
 /* Full name */
 .card-fullname {
-    color: black;
-    font-size: 18px;
+    color: red;
+    font-size: 20px;
     font-weight: bold;
     margin: 10px 0 5px;
 }
 
 /* Position in English */
 .card-position-english {
-    font-size: 15px;
-    color: grey;
+    font-size: 12px;
+    color: black;
     letter-spacing: 1px;
     margin-bottom: 10px
 }
@@ -63,7 +63,7 @@ h1 {
 /* Position */
 .card-position-vietnamese {
     font-size: 12px;
-    color: grey;
+    color: black;
     letter-spacing: 1px;
     margin-bottom: 10px
 }

@@ -55,7 +55,11 @@ function Navbar() {
 
       <ul className={click ? 'nav-menu active' : 'nav-menu'}>
         <li className="nav-item">
-          <Link to="/" className="nav-links" onClick={closeMobileMenu}>Home</Link>
+          <Link to="/" className="nav-links" onClick={closeMobileMenu}>HOME</Link>
+        </li>
+
+        <li className="nav-item">
+          <Link to="https://docs.google.com/document/d/e/2PACX-1vRuuTHlGCk672ZziSmycd2FpboE_OuT60AF39A0b36Ox_zloohwRiqHh8P5nNLjv-CB_NGRTjEij3RW/pub" className="nav-links" onClick={closeMobileMenu}>PHOTOS</Link>
         </li>
 
         <li
@@ -64,15 +68,15 @@ function Navbar() {
           onMouseLeave={handleMouseLeave}
         >
           <span className="nav-links" onClick={() => toggleDropdown('about')}>
-            About ▾
+            ABOUT ▾
           </span>
           {dropdown === 'about' && (
             <ul className="dropdown-menu">
               <Link to="/overview" className="dropdown-link" onClick={closeMobileMenu}>
-                Overview
+                ABOUT US
               </Link>
               <Link to="/team" className="dropdown-link" onClick={closeMobileMenu}>
-                Team
+                TEAM
               </Link>
             </ul>
           )}
@@ -84,28 +88,28 @@ function Navbar() {
           onMouseLeave={handleMouseLeave}
         >
           <span className="nav-links" onClick={() => toggleDropdown('resources')}>
-            Resources ▾
+            RESOURCES ▾
           </span>
           {dropdown === 'resources' && (
             <ul className="dropdown-menu">
               <li>
                 <a href="https://veym.net/resources/officialsongs" className="dropdown-link" onClick={closeMobileMenu}>
-                  Official Songs
+                  OFFICIAL SONGS
                 </a>
               </li>
               <li>
                 <a href="https://veym.net/resources/prayers" className="dropdown-link" onClick={closeMobileMenu}>
-                  Prayers
+                  PRAYERS
                 </a>
               </li>
               <li>
                 <a href="https://veym.net/resources/weeklygospel" className="dropdown-link" onClick={closeMobileMenu}>
-                  Weekly Gospel
+                  WEEKLY GOSPEL
                 </a>
               </li>
               <li>
                 <a href="https://veym.net/resources/trainingresources" className="dropdown-link" onClick={closeMobileMenu}>
-                  Training Resources
+                  TRAINING RESOURCES
                 </a>
               </li>
             </ul>
@@ -113,13 +117,19 @@ function Navbar() {
         </li>
 
         <li className="nav-item">
-          <Link to="/events" className="nav-links" onClick={closeMobileMenu}>Events</Link>
+          <Link to="/events" className="nav-links" onClick={closeMobileMenu}>
+            EVENTS
+          </Link>
         </li>
         <li className="nav-item">
-          <Link to="/contact" className="nav-links" onClick={closeMobileMenu}>Contact</Link>
+          <Link to="/contact" className="nav-links" onClick={closeMobileMenu}>
+            CONTACT
+          </Link>
         </li>
         <li className="nav-item">
-          <a href="https://veym.net/" className="nav-links" onClick={closeMobileMenu}>VEYM</a>
+          <a href="https://veym.net/" className="nav-links" onClick={closeMobileMenu}>
+            VEYM
+          </a>
         </li>
       </ul>
     </nav>
