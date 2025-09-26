@@ -3,7 +3,6 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages";
-// import About from "./pages/about";
 import Events from "./pages/events";
 import Contact from "./pages/contact";
 import Footer from './components/Footer';
@@ -12,7 +11,7 @@ import Team from "./pages/team";
 
 function App() {
     return (
-        <Router>
+        <Router basename="/thd-official-website">
             {/* Navbar should always appear */}
             <Navbar />
             <Routes>
