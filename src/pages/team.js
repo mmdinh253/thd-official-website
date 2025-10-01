@@ -5,7 +5,7 @@ const Team = () => {
     const cha = {
         name: "Cha Đaminh Nguyễn Anh Tuấn", 
         position_vietnamese: "Cha Tuyên Úy", 
-        img: "/images/chatuan.jpg" 
+        img: process.env.PUBLIC_URL + "/images/chatuan.jpg" 
     };
 
     const btv = [
