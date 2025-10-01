@@ -43,7 +43,10 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <img src="/public/images/tacomatntt.png" alt="Logo" className="navbar-logo" />
+      <img src={process.env.PUBLIC_URL + "/images/tacomatntt.png"} 
+        alt="Logo" 
+        className="navbar-logo" 
+      />
 
       <Link to="/" className="navbar-title" onClick={closeMobileMenu}>
         Đoàn Têrêsa Hài Đồng Giêsu
