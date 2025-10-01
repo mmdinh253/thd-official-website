@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/thd-official-website/static/css/main.cb479421.css",
-    "main.js": "/thd-official-website/static/js/main.895aa520.js",
+    "main.js": "/thd-official-website/static/js/main.c9efd9ed.js",
     "static/js/488.b311a4a9.chunk.js": "/thd-official-website/static/js/488.b311a4a9.chunk.js",
     "static/media/fa-solid-900.ttf": "/thd-official-website/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
     "static/media/fa-brands-400.ttf": "/thd-official-website/static/media/fa-brands-400.1815e00441357e01619e.ttf",
@@ -13,11 +13,11 @@
     "static/media/fa-v4compatibility.woff2": "/thd-official-website/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
     "index.html": "/thd-official-website/index.html",
     "main.cb479421.css.map": "/thd-official-website/static/css/main.cb479421.css.map",
-    "main.895aa520.js.map": "/thd-official-website/static/js/main.895aa520.js.map",
+    "main.c9efd9ed.js.map": "/thd-official-website/static/js/main.c9efd9ed.js.map",
     "488.b311a4a9.chunk.js.map": "/thd-official-website/static/js/488.b311a4a9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cb479421.css",
-    "static/js/main.895aa520.js"
+    "static/js/main.c9efd9ed.js"
   ]
 }
