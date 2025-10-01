@@ -4,11 +4,11 @@ import { Button } from './Button';
 import './HeroSection.css';
 
 const images = [
-  '/images/grouppic.jpg',
-  '/images/mass.jpg',
-  '/images/retreatgrouppic.jpg',
-  '/images/bngrouppic.jpg',
-  '/images/hlht.jpg'
+  process.env.PUBLIC_URL + '/images/grouppic.jpg',
+  process.env.PUBLIC_URL + '/images/mass.jpg',
+  process.env.PUBLIC_URL + '/images/retreatgrouppic.jpg',
+  process.env.PUBLIC_URL + '/images/bngrouppic.jpg',
+  process.env.PUBLIC_URL + '/images/hlht.jpg'
 ];
 
 function HeroSection() {
