@@ -9,18 +9,18 @@ const Team = () => {
     };
 
     const btv = [
-        { name: "Tr. Vien", position_english: "Chapter President", position_vietnamese: "Đoàn Trưởng", img: "/images/vienhua.jpg" },
-        { name: "Tr. Bao Huong", position_english: "Chapter Vice President of Administrative Affairs", position_vietnamese: "Phó Quản Trị", img: "/images/bhdoan.jpg" },
-        { name: "Tr. Julie", position_english: "Chapter Vice President of Academic Affairs", position_vietnamese: "Phó Nghiên Huấn", img: "/images/juliedinh.jpg" },
-        { name: "Tr. Uyen", position_english: "Chapter Secretary", position_vietnamese: "Thư Ký", img: "/images/uyendao.jpg" },
-        { name: "Tr. Trung", position_english: "Chapter Treasurer", position_vietnamese: "Thủ Quỹ", img: "/images/trungdo.jpg" },
+        { name: "Tr. Vien", position_english: "Chapter President", position_vietnamese: "Đoàn Trưởng", img: process.env.PUBLIC_URL + "/images/vienhua.jpg" },
+        { name: "Tr. Bao Huong", position_english: "Chapter Vice President of Administrative Affairs", position_vietnamese: "Phó Quản Trị", img: process.env.PUBLIC_URL + "/images/bhdoan.jpg" },
+        { name: "Tr. Julie", position_english: "Chapter Vice President of Academic Affairs", position_vietnamese: "Phó Nghiên Huấn", img: process.env.PUBLIC_URL + "/images/juliedinh.jpg" },
+        { name: "Tr. Uyen", position_english: "Chapter Secretary", position_vietnamese: "Thư Ký", img: process.env.PUBLIC_URL + "/images/uyendao.jpg" },
+        { name: "Tr. Trung", position_english: "Chapter Treasurer", position_vietnamese: "Thủ Quỹ", img: process.env.PUBLIC_URL + "/images/trungdo.jpg" },
     ];
 
     const nganhTruong = [
-        { name: "Tr. Uyen", position_english: "Division Leader Seedling Specialist", position_vietnamese: "Ngành Trưởng Ấu Nhi", img: "/images/uyendao.jpg" },
-        { name: "Tr. Bao Ngan", position_english: "Division Leader Search Specialist", position_vietnamese: "Ngành Trưởng Thiếu Nhi", img: "/images/bndoan.jpg" },
-        { name: "Tr. Michael", position_english: "Division Leader Companion Specialist", position_vietnamese: "Ngành Trưởng Nghĩa Sĩ", img: "/images/portrait.jpeg" },
-        { name: "Tr. An", position_english: "Division Leader Knights of the Eucharist Specialist", position_vietnamese: "Ngành Trưởng Hiệp Sĩ", img: "/images/antran.jpg" },
+        { name: "Tr. Uyen", position_english: "Division Leader Seedling Specialist", position_vietnamese: "Ngành Trưởng Ấu Nhi", img: process.env.PUBLIC_URL + "/images/uyendao.jpg" },
+        { name: "Tr. Bao Ngan", position_english: "Division Leader Search Specialist", position_vietnamese: "Ngành Trưởng Thiếu Nhi", img: process.env.PUBLIC_URL + "/images/bndoan.jpg" },
+        { name: "Tr. Michael", position_english: "Division Leader Companion Specialist", position_vietnamese: "Ngành Trưởng Nghĩa Sĩ", img: process.env.PUBLIC_URL + "/images/portrait.jpeg" },
+        { name: "Tr. An", position_english: "Division Leader Knights of the Eucharist Specialist", position_vietnamese: "Ngành Trưởng Hiệp Sĩ", img: process.env.PUBLIC_URL +"/images/antran.jpg" },
     ]
 
     return (
