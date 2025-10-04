@@ -1,4 +1,4 @@
-# Doan Teresa Hai Dong Giesu Unofficial Website
+# Đoàn Têrêsa Hài Đồng Giêsu Unofficial Website
 This is the unofficial website of the Thérèse of Lisieux Chapter (Đoàn Têrêsa Hài Đồng Giêsu) in Tacoma, WA.
 It provides information about our leadership team, events, resources, and contact information.
 
